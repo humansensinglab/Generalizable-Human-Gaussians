@@ -1,0 +1,143 @@
+body {
+    font-family: 'Roboto', sans-serif;
+	font-weight: 300;
+}
+h2, h3, h4, h5, h6, .form-control, small {
+	font-weight: 300;
+}
+p, .form-control, li {
+	font-size: 0.91em
+}
+#bibtex {
+	height: 12.9em
+}
+#paper-title h3 small {
+	color: #777;
+	font-size: 0.7em
+}
+.container > .row > img.img-responsive,
+.container > .row > div > img.img-responsive {
+	padding: 1em 0
+}
+.row img.img-responsive {
+	width: 100%;
+}
+#authors .list-inline-item {
+	padding: 0.5em
+}
+.gif-label {
+	margin: 0.3em 0;
+	font-size: 0.7em;
+}
+.gif-label > div {
+	text-align: center;
+	padding: 0
+}
+#dynamic-teaser .gif-label {
+	margin: 0 -15px;
+}
+body > .container > .row > div {
+	padding: 0 2em
+}
+body > .container > .row > div.grey-container  {
+	background: #f2f2f2;
+	padding: 1.5em 2em
+}
+.row.eleven-col {
+	width: 109.0909090909%;
+	overflow: hidden
+}
+.row.ten-col {
+	width: 120%;
+	overflow: hidden
+}
+.row.eight-col {
+	width: 150%;
+	overflow: hidden
+}
+.io-arrow {
+	position: relative;
+	display:block;
+	text-align:center;
+}
+.io-arrow > svg {
+	position: absolute;
+	color: #555;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%)
+}
+
+#teaser-one .row > div > .row {
+	padding: 0 35px
+}
+#teaser-two > div > .row {
+	padding: 0 15px
+}
+
+#teaser-one .row > div,
+#teaser-two .row > div {
+	padding: 0
+}
+
+#dynamic-teaser {
+	position: relative;
+	width: 100%;
+}
+
+@media only screen and (max-width: 992px) {
+	#teaser-one .row > div > .row {
+		padding: 0 55px
+	}
+}
+@media only screen and (max-width: 768px) {
+	#teaser-one .row > div > .row {
+		padding: 0 75px
+	}
+}
+@media only screen and (max-width: 576px) {
+	#teaser-one .row > div > .row {
+		padding: 0 35px
+	}
+}
+
+.slider-container {
+    position: relative;
+    max-width: 800px;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    width: 100%;
+}
+
+.video-slide {
+    width: 100%;
+    display: none; /* Hide all videos by default */
+}
+
+.video-slide.active {
+    display: block; /* Show the active video */
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    z-index: 100;
+}
+
+button.prev {
+    left: 0;
+}
+
+button.next {
+    right: 0;
+}
