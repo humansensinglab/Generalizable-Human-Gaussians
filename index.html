@@ -130,10 +130,10 @@
                             <a href="https://youngjoongunc.github.io/">Youngjoong Kwon</a><sup>1</sup>
 
                         <li class="list-inline-item">
-                            <a href="https://github.com/baolef">Baole Fang</a><sup>1</sup>
+                            <a href="https://github.com/baolef">Baole Fang&#42;</a><sup>1</sup>
 
                         <li class="list-inline-item">
-                            <a href="https://lewis-lv0.github.io/">Yixing Lu</a><sup>1</sup>
+                            <a href="https://lewis-lv0.github.io/">Yixing Lu&#42;</a><sup>1</sup>
 
                         <li class="list-inline-item">
                             <a href="https://www.haoyed.com/">Haoye Dong</a><sup>1</sup>
@@ -151,13 +151,13 @@
                             <a href="https://atlantixjj.github.io/">Jianjin Xu</a><sup>1</sup>
 
                         <li class="list-inline-item">
-                            <a>Shingo Takagi</a><sup>1</sup>
+                            <a>Shingo Takagi</a><sup>2</sup>
 
                         <li class="list-inline-item">
-                            <a>Daeil Kim</a><sup>1</sup>
+                            <a>Daeil Kim</a><sup>2</sup>
 
                         <li class="list-inline-item">
-                            <a href="https://aayushp.github.io/">Aayush Prakash</a><sup>1</sup>
+                            <a href="https://aayushp.github.io/">Aayush Prakash</a><sup>2</sup>
 
                         <li class="list-inline-item">
                             <a href="https://www.cs.cmu.edu/~ftorre/">Fernando de la Torre</a><sup>1</sup>
@@ -165,6 +165,9 @@
                     <p id="institution">
                         <sup>1</sup>Carnegie Mellon University &nbsp; &nbsp;
                         <sup>2</sup>Meta Reality Labs &nbsp; &nbsp;
+                    </p>
+                    <p id="equal-contribution">
+                    &#42; Equal Contribution
                     </p>
                 </div>
             </div>
@@ -228,13 +231,29 @@ Our method outperforms recent methods on both within-dataset generalization as w
                 </div>
             </div>
 
+
+            <div class="row mb-4" id="overview">
+                <div class="col-md-8 mx-auto grey-container">
+                    <h4 class="pb-2">Overview</h4>
+                    <p class="text-justify">
+                    (a) We focus on generalizable human rendering under very sparse view setting.
+                        (b) We first construct the multi-scaffolds by dilating the human template surface.
+                        The 2D UV space of each scaffold serves to collect the geometry and appearance information from the corresponding 3D locations.
+                        (c) The aggregated multi-scaffold input is fed into the network, which generates multi-Gaussian parameter maps.
+                        (d) Finally, Gaussians are anchored on the corresponding surface of each scaffold, and rasterized into novel views.
+                    </p>
+                    <img src="./assets/images/overview_png.png" class="img-responsive" alt="pipeline">
+                </div>
+            </div>
+
     <div class="row mb-3 pt-2">
     <div class="col-md-8 mx-auto">
 
     <div id="in-domain">
         <h4>In-domain Generalization - Trained and Tested on THuman 2.0</h4>
                         <p class="text-justify">
-                            We compare our method with IBRNet and NHP on the unseen subjects of ZJU-MoCap dataset.
+                            Our method utilizes a 3D human prior to achieve robust and multi-view consistent novel view renderings under very sparse view setting.
+                            In addition, our method collects visual information from the multi-scaffold representations and thus recovers sharp and high-frequency details including hair, wrinkles, and logos.
                         </p>
     <div class="slider-container" id="slider1">
         <div class="slider">
@@ -262,7 +281,7 @@ Our method outperforms recent methods on both within-dataset generalization as w
     <div id="cross-domain">
         <h4>Cross-domain Generalization - Trained on THuman 2.0 Tested on RenderPeople</h4>
                         <p class="text-justify">
-                            We compare our method with IBRNet and NHP on the unseen subjects of ZJU-MoCap dataset.
+                            We achieve high-quality synthesis under the challenging cross-domain generalization setting.
                         </p>
     <div class="slider-container">
         <div class="slider" id="slider2">
@@ -301,23 +320,16 @@ Our method outperforms recent methods on both within-dataset generalization as w
                 </div>
             </div>
 
-            <div class="row mb-4" id="overview">
-                <div class="col-md-8 mx-auto grey-container">
-                    <h4 class="pb-2">Overview</h4>
-                    <p class="text-justify">
-                    (a) We focus on generalizable human rendering under very sparse view setting.
-                        (b) We first construct the multi-scaffolds by dilating the human template surface.
-                        The 2D UV space of each scaffold serves to collect the geometry and appearance information from the corresponding 3D locations.
-                        (c) The aggregated multi-scaffold input is fed into the network, which generates multi-Gaussian parameter maps.
-                        (d) Finally, Gaussians are anchored on the corresponding surface of each scaffold, and rasterized into novel views.
-                    </p>
-                    <img src="./assets/images/overview_png.png" class="img-responsive" alt="pipeline">
-                </div>
-            </div>
+
 
             <div class="row mb-4" id="main-video">
                 <div class="col-md-8 mx-auto grey-container">
                     <h4 class="pb-2">Main Video</h4>
+                    <p>
+                        In this video, in-domain and cross-domain generalization results are shown.
+                        Note that GPS-Gaussian* is trained and tested with 5 input views due to the rectification requirement,
+                        whereas NHP, NIA and our method are trained and tested with 3 input views.
+                    </p>>
                     <div class="embed-responsive embed-responsive-16by9">
                         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PyST3-dfmfI?si=li5r8mCGYZNbfYNs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
