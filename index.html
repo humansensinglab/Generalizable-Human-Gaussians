@@ -280,66 +280,54 @@ Our method outperforms recent methods on both within-dataset generalization as w
     </div>
     <script src="./static/js/script.js"></script>
 
+            <div class="row mb-3 pt-2">
+                <div class="col-md-8 mx-auto">
 
-            <div class="row mb-4" id="overview-video">
+                    <div id="multi-scaffold">
+                        <h4>Effectiveness of Multi-Scaffold</h4>
+                        <p class="text-justify">
+                            Each column shows different scaffold levels, with the last column illustrating their combined effect.
+                            The top part shows the RGB representation, while the bottom part highlights affected regions, with grey indicating unaffected areas.
+                        </p>
+
+                        <div class="col-12 text-center">
+
+                            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
+                                <source src="./assets/videos/scaffold_visualization_video_1s.mp4" type="video/mp4">
+                            </video>
+                        </div>
+
+                    </div> <!-- dynamic-teaser -->
+                </div>
+            </div>
+
+            <div class="row mb-4" id="overview">
                 <div class="col-md-8 mx-auto grey-container">
-                    <h4 class="pb-2">Overview Video</h4>
+                    <h4 class="pb-2">Overview</h4>
+                    <p class="text-justify">
+                    (a) We focus on generalizable human rendering under very sparse view setting.
+                        (b) We first construct the multi-scaffolds by dilating the human template surface.
+                        The 2D UV space of each scaffold serves to collect the geometry and appearance information from the corresponding 3D locations.
+                        (c) The aggregated multi-scaffold input is fed into the network, which generates multi-Gaussian parameter maps.
+                        (d) Finally, Gaussians are anchored on the corresponding surface of each scaffold, and rasterized into novel views.
+                    </p>
+                    <img src="./assets/images/overview_png.png" class="img-responsive" alt="pipeline">
+                </div>
+            </div>
+
+            <div class="row mb-4" id="main-video">
+                <div class="col-md-8 mx-auto grey-container">
+                    <h4 class="pb-2">Main Video</h4>
                     <div class="embed-responsive embed-responsive-16by9">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/DF5X5DSt6GU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/PyST3-dfmfI?si=li5r8mCGYZNbfYNs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
 
-            <div class="row mb-3">
-                <div class="col-md-8 mx-auto">
-                    <p class="text-justify">
-                        Given a sparse view images of an unseen person in the reference space, NIA instantly creates a human avatar for novel view synthesis and pose animation. NIA is a hybrid approach combining the SMPL-based implicit body representation and the image-based rendering method. Our appearance blender learns to adaptively blend the predictions from the two components. Note that if the reference space and the target pose spaces are identical (i.e., no pose difference, x = x', d = d'), the task is novel view synthesis. Otherwise, it is a pose animation task where we deform the NIA representation to repose the learned avatar.
 
-                    </p>
-                    <img src="images/nia_overview.png" class="img-responsive" alt="pipeline">
-                </div>
-            </div>
 
-            <div class="row mb-3 pt-2">
-                <div class="col-md-8 mx-auto">
 
-                    <div id="zju-nvs">
-                        <h4>Identity generalization - Novel-view synthesis</h4>
-                        <p class="text-justify">
-                            We compare our method with IBRNet and NHP on the unseen subjects of ZJU-MoCap dataset.
-                        </p>
 
-                        <div class="col-12 text-center">
-
-                            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                                <source src="images/zju_nvs_video.mp4" type="video/mp4">
-                            </video>
-                        </div>
-
-                    </div> <!-- dynamic-teaser -->
-                </div>
-            </div>
-
-            <div class="row mb-3 pt-2">
-                <div class="col-md-8 mx-auto">
-
-                    <div id="zju-reposing">
-                        <h4>Identity generalization - Pose animation</h4>
-                        <p class="text-justify">
-                            Our method can create an avatar and animate it given the still multi-view images of the unseen subject. And our method even outperforms the per-subject optimized Animatable NeRF.
-
-                        </p>
-
-                        <div class="col-12 text-center">
-
-                            <video width="100%" playsinline="" autoplay="autoplay" loop="loop" preload="" muted="">
-                                <source src="images/zju_pose_animation_1.mp4" type="video/mp4">
-                            </video>
-                        </div>
-
-                    </div> <!-- dynamic-teaser -->
-                </div>
-            </div>
 
 
 
