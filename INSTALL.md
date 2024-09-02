@@ -31,6 +31,7 @@ $ROOT/datasets
    └── val
       ├── img
       └── mask
+      └── transform   
       └── position_map_uv_space
       └── position_map_uv_space_outer_shell_1
       └── position_map_uv_space_outer_shell_2
@@ -42,6 +43,13 @@ $ROOT/datasets
       └── visibility_map_uv_space_outer_shell_3
       └── visibility_map_uv_space_outer_shell_4         
 ```
+
+3. (Optional) The original THuman 3D scans are randomly scaled / translated during the rendering process.
+If you need the adjusted SMPL-X meshes corresponding to the provided renderings, please use the following command. 
+```
+python process_dataset/regenerate_smplx.py
+```
+The adjusted SMPL-X meshes will be saved under `$ROOT/datasets/THuman/val/smplx_obj`
 
 ### Set up model weights
 We provide the pretrained models [here](https://1drv.ms/f/s!Aq9xVNM_DjPG5QD0W3TddUkp5aUT?e=sHwO4N). Place the model weights in the following structure:
