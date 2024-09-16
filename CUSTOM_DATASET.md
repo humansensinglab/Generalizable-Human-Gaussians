@@ -63,8 +63,8 @@ tar -xvzf THuman2.0_smplx.tar.gz
 
 5. Create the dataset split files (.txt) and place them under `$ROOT/datasets/THuman`.
 You can check the dataset split files for GHG for reference.
-The train split file can be downloaded [here](https://1drv.ms/t/s!Aq9xVNM_DjPG5TUgV8xktOZmKS38?e=mFRaxk). 
-The test split can be downloaded [here](https://1drv.ms/t/s!Aq9xVNM_DjPG5TTFd8yYhmRIXsDt?e=E3yhsw).
+The train split file can be downloaded [here](https://1drv.ms/t/s!Aq9xVNM_DjPG5TxZr5_kqBheaENR?e=cdkcaM). 
+The test split can be downloaded [here](https://1drv.ms/t/s!Aq9xVNM_DjPG5TtjUHtwVNegpv05?e=xiUl6e).
 
 6. Download the smplx_uv.obj from the [official SMPL-X website](https://smpl-x.is.tue.mpg.de/) and place it under `$ROOT/datasets/THuman`.
 
