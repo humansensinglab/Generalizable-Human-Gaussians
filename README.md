@@ -50,6 +50,12 @@ Instructions on downloading the dataset and pretrained model weights, and instal
 
 ---
 
+## Custom dataset
+
+If you want to try GHG on your own dataset, please refer to the [CUSTOM_DATASET.md](CUSTOM_DATASET.md).
+
+---
+
 ## Evaluation
 
 We provide detailed information about the evaluation protocol in [PROTOCOL.md](PROTOCOL.md).
