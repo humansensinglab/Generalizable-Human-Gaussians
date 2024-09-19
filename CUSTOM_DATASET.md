@@ -1,7 +1,9 @@
 ## Guideline for preparing custom dataset
+
 In this document, the process of preparing a custom dataset is elaborated. 
 Any dataset that provides 3D mesh files (.obj) together with SMPL-X parameters can be used. 
 We will describe the process using the THuman2.0 dataset as an example.
+
 ---
 
 ### Dataset structure
