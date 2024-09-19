@@ -30,15 +30,3 @@ def save_modified_obj(original_obj_path, modified_vertices, output_obj_path):
     print('after')
     print('save to {}'.format(output_obj_path))
     print('###')
-'''
-# Example usage
-original_obj_path = "path/to/original.obj"
-output_obj_path = "path/to/modified.obj"
-modified_vertices = [
-    [0.1, 0.2, 0.3],  # Replace with your modified vertex coordinates
-    [0.4, 0.5, 0.6],
-    # Add more modified vertex coordinates as needed
-]
-
-save_modified_obj(original_obj_path, modified_vertices, output_obj_path)
-'''

@@ -18,7 +18,7 @@ python setup.py install
 
 ### Set up datasets
 
-#### THuman 2.0 dataset
+#### Use the pre-processed THuman 2.0 dataset
 
 1. We are sharing the rendered dataset to those who already acquired access from the original THuman dataset authors. 
 Please first request the access to the dataset following the instructions [here](https://github.com/ytrock/THuman2.0-Dataset).
@@ -30,26 +30,30 @@ $ROOT/datasets
 └── THuman
    └── val
       ├── img
-      └── mask
-      └── transform   
-      └── position_map_uv_space
-      └── position_map_uv_space_outer_shell_1
-      └── position_map_uv_space_outer_shell_2
-      └── position_map_uv_space_outer_shell_3
-      └── position_map_uv_space_outer_shell_4
-      └── visibility_map_uv_space
-      └── visibility_map_uv_space_outer_shell_1
-      └── visibility_map_uv_space_outer_shell_2
-      └── visibility_map_uv_space_outer_shell_3
+      ├── mask
+      ├── transform   
+      ├── position_map_uv_space
+      ├── position_map_uv_space_outer_shell_1
+      ├── position_map_uv_space_outer_shell_2
+      ├── position_map_uv_space_outer_shell_3
+      ├── position_map_uv_space_outer_shell_4
+      ├── visibility_map_uv_space
+      ├── visibility_map_uv_space_outer_shell_1
+      ├── visibility_map_uv_space_outer_shell_2
+      ├── visibility_map_uv_space_outer_shell_3
       └── visibility_map_uv_space_outer_shell_4         
 ```
 
-3. (Optional) The original THuman 3D scans are randomly scaled / translated during the rendering process.
+4. (Optional) The original THuman 3D scans are randomly scaled / translated during the rendering process.
 If you need the adjusted SMPL-X meshes corresponding to the provided renderings, please use the following command. 
 ```
 python process_dataset/regenerate_smplx.py
 ```
 The adjusted SMPL-X meshes will be saved under `$ROOT/datasets/THuman/val/smplx_obj`
+
+#### Use the custom dataset
+
+Please refer to the [CUSTOM_DATASET.md](CUSTOM_DATASET.md).
 
 ### Set up model weights
 We provide the pretrained models [here](https://1drv.ms/f/s!Aq9xVNM_DjPG5QD0W3TddUkp5aUT?e=sHwO4N). Place the model weights in the following structure:

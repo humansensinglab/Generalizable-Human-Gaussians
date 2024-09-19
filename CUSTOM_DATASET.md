@@ -1,7 +1,7 @@
 ## Guideline for preparing custom dataset
-In this document, the process of preparing custom dataset is ellaborated.
-Any dataset that provides 3D files (.obj) together with SMPL-X parameters can work.
-In this document, we will describe the process with the example of THuman2.0 dataset.
+In this document, the process of preparing a custom dataset is elaborated. 
+Any dataset that provides 3D mesh files (.obj) together with SMPL-X parameters can be used. 
+We will describe the process using the THuman2.0 dataset as an example.
 ---
 
 ### Dataset structure
@@ -62,7 +62,7 @@ tar -xvzf THuman2.0_smplx.tar.gz
 
 
 5. Create the dataset split files (.txt) and place them under `$ROOT/datasets/THuman`.
-You can check the dataset split files for GHG for reference.
+You can refer to the dataset split files for GHG as a reference.
 The train split file can be downloaded [here](https://1drv.ms/t/s!Aq9xVNM_DjPG5TxZr5_kqBheaENR?e=cdkcaM). 
 The test split can be downloaded [here](https://1drv.ms/t/s!Aq9xVNM_DjPG5TtjUHtwVNegpv05?e=xiUl6e).
 
@@ -73,18 +73,40 @@ The test split can be downloaded [here](https://1drv.ms/t/s!Aq9xVNM_DjPG5TtjUHtw
 python process_dataset/render_image.py
 ```
 
+### Generate adjusted SMPL-X obj 
+Please download the SMPL-X pkl files from the [official SMPL-X website](https://smpl-x.is.tue.mpg.de/).
+```
+$ROOT/datasets
+└── THuman
+   └── models
+      └── smplx
+       ├── SMPLX_NEUTRAL.pkl
+       ├── SMPLX_FEMALE.pkl
+       └── SMPLX_MALE.pkl        
+```
+
+During the rendering process, 3D scans are randomly transformed. To generate the matching SMPL-X obj, run the following command:
+```
+python process_dataset/generate_smplx_obj.py
+```
+
 ### Render position maps
-Please first install the NVDiffrast.
+Please install the NVDiffrast.
 ```
 git clone https://github.com/NVlabs/nvdiffrast
 pip install .
 ```
-
+Render the position maps.
+```
+python process_dataset/render_position_map.py
+```
 
 ### Render visibility maps
 
-
-
+Please make sure to modify the image_height and image_width to match the image plane shape of your dataset.
+```
+python process_dataset/render_visibility_map.py
+```
 
 
 
