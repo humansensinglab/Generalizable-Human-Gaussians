@@ -56,6 +56,11 @@ If you want to try GHG on your own dataset, please refer to the [CUSTOM_DATASET.
 
 ---
 
+## Training
+    ```
+    CUDA_VISIBLE_DEVICES=0 python train_nightly_ver.py
+    ```
+
 ## Evaluation
 
 We provide detailed information about the evaluation protocol in [PROTOCOL.md](PROTOCOL.md).
